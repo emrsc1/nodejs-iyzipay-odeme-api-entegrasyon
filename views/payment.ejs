@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title><%= title %></title>
+     <style>
+    .payment-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+      <div class="container">
+    <div id="iyzipay-checkout-form">
+      <form method="POST" id="payment-form">
+        <h1><%= title %></h1> <br>
+        <div class="form-group">
+            
+          <label for="name">Ad Soyad</label>
+          <input type="text" class="form-control" id="name" name="cardHolderName" placeholder="Ad Soyad">
+        </div>
+        <div class="form-group">
+          <label for="cardNumber">Kart Numarası</label>
+          <input type="text" class="form-control" id="cardNumber" name="cardNumber" placeholder="Kart Numarası">
+        </div>
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="expiryMonth">Son Kullanım Ay</label>
+              <input type="text" class="form-control" id="expiryMonth" name="expireMonth" placeholder="MM">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="expiryYear">Son Kullanım Yıl</label>
+              <input type="text" class="form-control" id="expiryYear" name="expireYear" placeholder="YYYY">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cvc">CVC</label>
+          <input type="text" class="form-control" id="cvc" name="cvc" placeholder="CVC">
+        </div>        
+        <div id="iyzico-button"><button type="submit">Ödemeyi Tamamla</button></div>
+      </form>
+    </div>
+  </div>
+   
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://static.iyzipay.com/plugins/v1/iyzico-buttons.min.js"></script>
+</body>
+</html>
